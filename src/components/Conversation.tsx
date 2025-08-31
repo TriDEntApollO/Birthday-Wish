@@ -34,8 +34,8 @@ const Conversation: React.FC<Props> = ({ onComplete }) => {
 
   const bubbleRef = useRef<HTMLDivElement>(null);
   const currentMessage = messages[step];
-  const messageInterval = 100;
-  const typingInterval = 20;
+  const messageInterval = 600;
+  const typingInterval = 80;
 
   const exitConversation = () => {
     // reset everything
