@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Extend colors */
+  :root {
+    --tw-pastel-pink: #FDE2E4;
+    --tw-pastel-purple: #A299FF;
+    --tw-pastel-yellow: #FFF7AE;
+    --tw-pastel-blue: #AEEFFF;
+    --tw-pastel-green: #D4F7DC;
+    --tw-pastel-red: #FF9AA2;
+    --tw-pastel-white: #FFFFFF;
+    --tw-pastel-black: #585858;       /* pastel black */
+    --tw-pastel-deep-pink: #e499b2;
+    --tw-deep-pastel-pink: #e499b2;   /* deeper pink */
+    --tw-deep-pastel-purple: #6155e7; /* deeper lavender */
+    --tw-deep-pastel-yellow: #fce58f; /* golden pastel */
+    --tw-deep-pastel-blue: #7fd4e6;   /* deeper sky blue */
+    --tw-deep-pastel-green: #a2e0b8;  /* soft mint green */
+    --tw-deep-pastel-red: #f77985;    /* deeper coral red */
+    --tw-deep-pastel-white: #f9f9f9;  /* slightly off-white */
+  }
+
+  /* Map Tailwind color classes to CSS variables */
+  .bg-pastel-pink { background-color: var(--tw-pastel-pink); }
+  .bg-pastel-purple { background-color: var(--tw-pastel-purple); }
+  .bg-pastel-yellow { background-color: var(--tw-pastel-yellow); }
+  .bg-pastel-blue { background-color: var(--tw-pastel-blue); }
+  .bg-pastel-green { background-color: var(--tw-pastel-green); }
+  .bg-pastel-red { background-color: var(--tw-pastel-red); }
+  .bg-pastel-white { background-color: var(--tw-pastel-white); }
+  .bg-pastel-black { background-color: var(--tw-pastel-black); }
+  .bg-pastel-gradient {
+    background: linear-gradient(0deg, var(--tw-pastel-pink), var(--tw-pastel-pink), var(--tw-pastel-deep-pink));
+  }
+  .bg-deep-pastel-pink { background-color: var(--tw-deep-pastel-pink); }
+  .bg-deep-pastel-purple { background-color: var(--tw-deep-pastel-purple); }
+  .bg-deep-pastel-yellow { background-color: var(--tw-deep-pastel-yellow); }
+  .bg-deep-pastel-blue { background-color: var(--tw-deep-pastel-blue); }
+  .bg-deep-pastel-green { background-color: var(--tw-deep-pastel-green); }
+  .bg-deep-pastel-red { background-color: var(--tw-deep-pastel-red); }
+  .bg-deep-pastel-white { background-color: var(--tw-deep-pastel-white); }
+
+  
+  .text-pastel-pink { color: var(--tw-pastel-pink); }
+  .text-pastel-purple { color: var(--tw-pastel-purple); }
+  .text-pastel-yellow { color: var(--tw-pastel-yellow); }
+  .text-pastel-blue { color: var(--tw-pastel-blue); }
+  .text-pastel-green { color: var(--tw-pastel-green); }
+  .text-pastel-red { color: var(--tw-pastel-red); }
+  .text-pastel-white { color: var(--tw-pastel-white); }
+  
+  .text-deep-pastel-pink { color: var(--tw-deep-pastel-pink); }
+  .text-deep-pastel-purple { color: var(--tw-deep-pastel-purple); }
+  .text-deep-pastel-yellow { color: var(--tw-deep-pastel-yellow); }
+  .text-deep-pastel-blue { color: var(--tw-deep-pastel-blue); }
+  .text-deep-pastel-green { color: var(--tw-deep-pastel-green); }
+  .text-deep-pastel-red { color: var(--tw-deep-pastel-red); }
+  .text-deep-pastel-white { color: var(--tw-deep-pastel-white); }
+
+    /* Border colors */
+  .border-pastel-pink { border-color: var(--tw-pastel-pink); }
+  .border-pastel-purple { border-color: var(--tw-pastel-purple); }
+  .border-pastel-yellow { border-color: var(--tw-pastel-yellow); }
+  .border-pastel-blue { border-color: var(--tw-pastel-blue); }
+  .border-pastel-green { border-color: var(--tw-pastel-green); }
+  .border-pastel-red { border-color: var(--tw-pastel-red); }
+  .border-pastel-white { border-color: var(--tw-pastel-white); }
+  .border-pastel-black { border-color: var(--tw-pastel-black); }
+
+  .border-deep-pastel-pink { border-color: var(--tw-deep-pastel-pink); }
+  .border-deep-pastel-purple { border-color: var(--tw-deep-pastel-purple); }
+  .border-deep-pastel-yellow { border-color: var(--tw-deep-pastel-yellow); }
+  .border-deep-pastel-blue { border-color: var(--tw-deep-pastel-blue); }
+  .border-deep-pastel-green { border-color: var(--tw-deep-pastel-green); }
+  .border-deep-pastel-red { border-color: var(--tw-deep-pastel-red); }
+  .border-deep-pastel-white { border-color: var(--tw-deep-pastel-white); }
+
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-animation {
+  animation: pop 0.3s ease-out forwards;
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; transform: scale(1) translateY(0); }
+  25%  { opacity: 0.6; transform: scale(1.1) translateY(-1px); }
+  50%  { opacity: 0.8; transform: scale(0.9) translateY(1px); }
+  75%  { opacity: 0.5; transform: scale(1.05) translateY(-1px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-flicker {
+  animation: flicker 1.5s infinite ease-in-out;
+}
