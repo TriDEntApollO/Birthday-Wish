@@ -1,4 +1,4 @@
-# Sree Birthday 🎉
+# Birthday Wish 🎉
 ![thumbnail](./public/assets/landingPage-e358691f-5272-4f92-8b19-874531242b2f)
 
 ## 🗂️ Description
